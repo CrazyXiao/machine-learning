@@ -62,6 +62,16 @@ P =程序赢得下一场比赛的概率。
 
 
 
+----
+
+其他笔记：
+
+<https://github.com/zlotus/notes-LSJU-machine-learning>
+
+<https://github.com/lijin-THU/notes-machine-learning>
+
+<https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes>
+
 
 
 

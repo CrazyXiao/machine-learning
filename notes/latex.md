@@ -61,10 +61,10 @@
 4. 对数运算，符号：`\log`，如：$\log(x)$
 5. 极限运算，符号：`\lim`，如：$\lim^{x \to \infty}_{y \to 0}{\frac{x}{y}}$
 6. 极限运算，符号：`\displaystyle \lim`，如：$\displaystyle \lim^{x \to \infty}_{y \to 0}{\frac{x}{y}}$
-7. 求和运算，符号：`\sum`，如：$\sum^{x \to \infty}_{y \to 0}{\frac{x}{y}}$
+7. 求和运算，符号：`\sum`，如：$\sum^{x \to \infty}_{y \to 0}{\frac{x}{y}}​$
 8. 求和运算，符号：`\displaystyle \sum`，如：$\displaystyle \sum^{x \to \infty}_{y \to 0}{\frac{x}{y}}$
-9. 积分运算，符号：`\int`，如：$\int^{\infty}_{0}{xdx}$
-10. 积分运算，符号：`\displaystyle \int`，如：$\displaystyle \int^{\infty}_{0}{xdx}$
+9. 积分运算，符号：`\int`，如：$\int^{\infty}_{0}{xdx}​$
+10. 积分运算，符号：`\displaystyle \int`，如：$\displaystyle \int^{\infty}_{0}{xdx}​$
 11. 微分运算，符号：`\partial`，如：$\frac{\partial x}{\partial y}$
 12. 矩阵表示，符号：`\begin{matrix} \end{matrix}`，如：$\left[ \begin{matrix} 1 &2 &\cdots &4\5 &6 &\cdots &8\\vdots &\vdots &\ddots &\vdots\13 &14 &\cdots &16\end{matrix} \right]$
 
@@ -141,3 +141,6 @@
 来源：简书
 
 简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+
+
+
