@@ -72,6 +72,8 @@ P =程序赢得下一场比赛的概率。
 
 <https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes>
 
+<https://github.com/lijin-THU/notes-python>
+
 
 
 
