@@ -3,7 +3,30 @@ Python拥有大量的数据分析、统计和机器学习库，使其成为许�
 
 以下是基于Python的机器学习总结，包括一些广泛使用的机器学习方法和工具。
 
-## SciPy 栈
+## 机器学习方法
+
+[从零开始掌握Python机器学习](../notes/Python机器学习.md)
+
+[机器学习相关算法](../notes/机器学习相关算法.md)
+
+[机器学习应用实现步骤](../notes/算法应用步骤.md)
+
+[特征工程](../notes/特征工程.md)
+
+[自然语言处理](../notes/自然语言处理.md)
+
+## 实战
+
+- [吴恩达老师的机器学习课程个人笔记及python实现](https://github.com/CrazyXiao/machine-learning/tree/master/notes/AndrewNg)
+- 机器学习实战
+- 《统计学习方法》算法实现
+- [自然语言处理之情感分析](<https://github.com/CrazyXiao/machine-learning/tree/master/code/nlp/senti_analysis>)
+
+
+
+## 工具
+
+### SciPy 栈
 
 SciPy 栈由数据科学所使用的一组核心帮助包组成，用于统计分析和数据可视化。 由于其庞大的功能和易用性，scripy栈被认为是大多数数据科学应用的必备条件。
 
@@ -13,13 +36,13 @@ SciPy 栈由数据科学所使用的一组核心帮助包组成，用于统计�
 2. [Matplotlib](http://matplotlib.org/)
 3. [pandas](http://pandas.pydata.org/)
 
-## scikit-learn
+### scikit-learn
 
 Scikit是一个用于Python的免费开源机器学习库。 它提供了现成的功能来实现诸如线性回归、 分类器、SVM、k-均值和神经网络等多种算法。它还有一些可直接用于训练和测试的样本数据集。
 
 由于其速度、鲁棒性和易用性，它是许多机器学习应用程序中使用最广泛的库之一。
 
-### 例子
+#### 例子
 
 本例中，我们在 [Iris 数据集](http://en.wikipedia.org/wiki/Iris_flower_data_set) 上训练一个简单的分类器，它与scikit-learn捆绑在一起。
 
@@ -79,6 +102,8 @@ print (accuracy_score(pred, y_test))*100 #prediction accuracy
 第一行包含由我们的分类器预测的测试数据的标签（即花种），第二行包含数据集中给出的实际花种。 我们这次准确率达到100％。
 
 关于scikit-learn的更多内容可以在 [官方文档](http://scikit-learn.org/stable/user_guide.html) 中阅读。
+
+
 
 ------
 
