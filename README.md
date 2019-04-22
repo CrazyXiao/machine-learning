@@ -5,15 +5,15 @@ Python拥有大量的数据分析、统计和机器学习库，使其成为许�
 
 ## 机器学习方法
 
-[从零开始掌握Python机器学习](../notes/Python机器学习.md)
+[从零开始掌握Python机器学习](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.md>)
 
-[机器学习相关算法](../notes/机器学习相关算法.md)
+[机器学习相关算法](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/机器学习相关算法.md.md>)
 
-[机器学习应用实现步骤](../notes/算法应用步骤.md)
+[机器学习应用实现步骤](https://github.com/CrazyXiao/machine-learning/blob/master/notes/算法应用步骤.md)
 
-[特征工程](../notes/特征工程.md)
+[特征工程](https://github.com/CrazyXiao/machine-learning/blob/masternotes/特征工程.md)
 
-[自然语言处理](../notes/自然语言处理.md)
+[自然语言处理](https://github.com/CrazyXiao/machine-learning/blob/master/notes/自然语言处理.md)
 
 ## 实战
 
