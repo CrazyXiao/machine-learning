@@ -39,7 +39,7 @@ Scikit是一个用于Python的免费开源机器学习库。 它提供了现成�
 
 |                             知识                             | 实现                                            |
 | :----------------------------------------------------------: | ----------------------------------------------- |
-| [线性回归(Linear Regression)](<../master/notes/AndrewNg/线性回归.md>) | [代码](<../blob/master/code/linear_regression>) |
+| [线性回归(Linear Regression)](<../master/notes/AndrewNg/线性回归.md>) | [代码](<../tree/master/code/linear_regression>) |
 
 ------
 
