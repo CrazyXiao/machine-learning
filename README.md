@@ -7,11 +7,11 @@ Python拥有大量的数据分析、统计和机器学习库，使其成为许�
 
 [从零开始掌握Python机器学习](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.md>)
 
-[机器学习相关算法](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/机器学习相关算法.md.md>)
+[机器学习相关算法](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/机器学习相关算法.md>)
 
 [机器学习应用实现步骤](https://github.com/CrazyXiao/machine-learning/blob/master/notes/算法应用步骤.md)
 
-[特征工程](https://github.com/CrazyXiao/machine-learning/blob/masternotes/特征工程.md)
+[特征工程](https://github.com/CrazyXiao/machine-learning/blob/master/notes/特征工程.md)
 
 [自然语言处理](https://github.com/CrazyXiao/machine-learning/blob/master/notes/自然语言处理.md)
 
@@ -44,7 +44,7 @@ Scikit是一个用于Python的免费开源机器学习库。 它提供了现成�
 
 #### 例子
 
-本例中，我们在 [Iris 数据集](http://en.wikipedia.org/wiki/Iris_flower_data_set) 上训练一个简单的分类器，它与scikit-learn捆绑在一起。
+本例中，我们在 Iris 数据集 上训练一个简单的分类器，它与scikit-learn捆绑在一起。
 
 数据集具有花的四个特征：萼片长度，萼片宽度，花瓣长度和花瓣宽度，并将它们分为三个花种 （标签）：setosa、versicolor或virginica。 标签已经被表示为数据集中的数字： 0（setosa），1（versicolor）和2（virginica）。
 
