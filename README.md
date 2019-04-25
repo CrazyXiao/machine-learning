@@ -3,6 +3,8 @@ Python拥有大量的数据分析、统计和机器学习库，使其成为许�
 
 以下是基于Python的机器学习总结，包括一些广泛使用的机器学习方法和工具。
 
+**注：该项目所有的代码实现基于python3,文章中数学公式要在github上正常显示，需安装 chrome插件 [mathjax plugin for github](<https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima>) 或者clone后离线使用markdown编辑器阅读。**
+
 ## 机器学习方法
 
 [从零开始掌握Python机器学习](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.md>)
@@ -43,5 +45,5 @@ Scikit是一个用于Python的免费开源机器学习库。 它提供了现成�
 
 ------
 
-### 持续更新中...
+#### 持续更新中...
 
