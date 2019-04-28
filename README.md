@@ -37,12 +37,28 @@ SciPy 栈由数据科学所使用的一组核心帮助包组成，用于统计�
 
 Scikit是一个用于Python的免费开源机器学习库。 它提供了现成的功能来实现诸如线性回归、 分类器、SVM、k-均值和神经网络等多种算法。它还有一些可直接用于训练和测试的样本数据集。由于其速度、鲁棒性和易用性，它是许多机器学习应用程序中使用最广泛的库之一。这里有一个使用scikit-learn进行机器学习的[demo](<https://github.com/CrazyXiao/machine-learning/tree/master/code/demo/iris_demo.md>),关于scikit-learn的更多内容可以在 [官方文档](http://scikit-learn.org/stable/user_guide.html) 中阅读。
 
+### tensorflow
+
+TensorFlow 是一款用于数值计算的强大的开源软件库，特别适用于大规模机器学习的微调。这里有一个使用tf解决手写识别问题的[demo](<../master/code/tf/mnist.py>),关于tensorflow的更多教程可以在[中文社区](<http://www.tensorfly.cn/tfdoc/get_started/introduction.html>)中阅读。
+
+### keras
+
+Keras是一个高层神经网络API，Keras由纯Python编写而成并基Tensorflow、Theano以及CNTK]后端。Keras 为支持快速实验而生，能够把你的idea迅速转换为结果，如果你有如下需求，请选择Keras：
+
+- 简易和快速的原型设计（keras具有高度模块化，极简，和可扩充特性）
+- 支持CNN和RNN，或二者的结合
+- 无缝CPU和GPU切换
+
+
+
 ## 入门
 
 |                             知识                             | 实现                                         |
 | :----------------------------------------------------------: | -------------------------------------------- |
 | [线性回归(Linear Regression)](<../master/notes/AndrewNg/线性回归.md>) | [代码](<../master/code/linear_regression>)   |
 | [逻辑回归(Logistic Regression)](<../master/notes/AndrewNg/逻辑回归.md>) | [代码](<../master/code/logistic_regression>) |
+|                    决策树(Decision Tree)                     | [代码](<../master/code/decision_tree>)       |
+|      [K近邻(k-Nearest Neighbour)](<../master/code/knn>)      | [代码](<../master/code/knn/simpleKnn.py>)    |
 
 ------
 
