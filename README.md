@@ -57,6 +57,7 @@ Keras是一个高层神经网络API，Keras由纯Python编写而成并基Tensorf
 | :----------------------------------------------------------: | -------------------------------------------- |
 | [线性回归(Linear Regression)](<../master/notes/AndrewNg/线性回归.md>) | [代码](<../master/code/linear_regression>)   |
 | [逻辑回归(Logistic Regression)](<../master/notes/AndrewNg/逻辑回归.md>) | [代码](<../master/code/logistic_regression>) |
+|                            正则化                            |                                              |
 |                    决策树(Decision Tree)                     | [代码](<../master/code/decision_tree>)       |
 |      [K近邻(k-Nearest Neighbour)](<../master/code/knn>)      | [代码](<../master/code/knn/simpleKnn.py>)    |
 
