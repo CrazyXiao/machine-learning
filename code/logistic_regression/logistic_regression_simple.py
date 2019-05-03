@@ -2,6 +2,7 @@
 
 """
     逻辑回归用于线性模型
+
 """
 
 import numpy as np
@@ -56,12 +57,14 @@ def plot(X, y,res):
     x1_min, x1_max = X[:, 1].min(), X[:, 1].max(),
     x2_min, x2_max = X[:, 2].min(), X[:, 2].max(),
     xx1, xx2 = np.meshgrid(np.linspace(x1_min, x1_max), np.linspace(x2_min, x2_max))
-    h = sigmoid(np.c_[np.ones((xx1.ravel().shape[0], 1)), xx1.ravel(), xx2.ravel()].dot(res.x))
+
+    h = sigmoid(np.c_[np.ones((xx1.ravel().shape[0], 28)), xx1.ravel(), xx2.ravel()].dot(res.x))
     h = h.reshape(xx1.shape)
-    plt.contour(xx1, xx2, h, [0.5], linewidths=1, colors='b')
+    plt.contour(xx1, xx2, h, 1, linewidths=1, colors='b')
 
     plt.show()
 
+# 考试1成绩 考试2成绩 是否通过
 data = loaddata('data1.txt', ',')
 
 X = np.c_[np.ones((data.shape[0],1)), data[:,0:2]]
