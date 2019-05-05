@@ -50,8 +50,7 @@ Keras是一个高层神经网络API，Keras由纯Python编写而成并基Tensorf
 ## 基础
 
 -  [pandas数据处理](../master/code/demo/pandas_demo.ipynb)
-
-
+- [seaborn绘图](<https://elitedatascience.com/python-seaborn-tutorial>)
 
 ## 入门
 
