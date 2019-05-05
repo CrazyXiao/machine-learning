@@ -25,8 +25,6 @@ Python拥有大量的数据分析、统计和机器学习库，使其成为许�
 
 《统计学习方法》算法实现
 
-[自然语言处理之情感分析](<https://github.com/CrazyXiao/machine-learning/tree/master/code/nlp/senti_analysis>)
-
 ## 工具
 
 ### SciPy 栈
@@ -48,6 +46,10 @@ Keras是一个高层神经网络API，Keras由纯Python编写而成并基Tensorf
 - 简易和快速的原型设计（keras具有高度模块化，极简，和可扩充特性）
 - 支持CNN和RNN，或二者的结合
 - 无缝CPU和GPU切换
+
+## 基础
+
+-  pandas数据处理
 
 
 
