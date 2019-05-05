@@ -18,6 +18,7 @@ y = iris.target
 # 训练集和测试集
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
+print(X_train.shape)
 # 构造分类器
 classifier = tree.DecisionTreeClassifier()
 classifier.fit(X_train, y_train)
