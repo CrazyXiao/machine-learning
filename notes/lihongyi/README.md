@@ -40,7 +40,7 @@
 
 李宏毅机器学习课程
 
-Datawhale整理开源笔记《李宏毅机器学习》
+[Datawhale整理开源笔记《李宏毅机器学习》](<https://github.com/datawhalechina/Leeml-Book>)
 
 **参考链接**
 
