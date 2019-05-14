@@ -139,22 +139,123 @@ $θ=θ_0−α{\bigtriangledown}f(\theta_0)$, $a$为$a^{'}$与${\bigtriangledown}
 
 ### 梯度下降代码实现
 
+```pyth
+"""
+    自己实现
+    梯度下降解决线性回归问题
+"""
+import numpy as np
+import matplotlib.pyplot as plt
 
+def costFunction(X, y, theta=[0, 0]):
+    """
+        损失函数
+    """
+    m = y.size
+    h = X.dot(theta)
+    J = 1.0 / (2 * m) * (np.sum(np.square(h - y)))
+    return J
+
+def gradientDescent(X, y, theta=[0, 0], alpha=0.01, num_iters=1500):
+    """
+        梯度下降
+    """
+    m = y.size
+    J_history = np.zeros(num_iters)
+    for iter in np.arange(num_iters):
+        h = X.dot(theta)
+        theta = theta - alpha * (1.0 / m) * (X.T.dot(h - y))
+        J_history[iter] = costFunction(X, y, theta)
+    return (theta, J_history)
+
+def MaxMinNormalization(x):
+    """
+        归一化
+    """
+    Min = np.min(x)
+    Max = np.max(x)
+    x = (x - Min) / (Max - Min)
+    return x
+
+
+# 自己构造数据集
+X_row = 100 * np.random.rand(100)
+X = MaxMinNormalization(X_row)
+y = 0.5*X + 2 + np.random.normal(0,0.01,(100,))
+
+# 数据可视化
+plt.subplot(1, 2, 1)
+plt.scatter(X_row, y, color='black')
+plt.xlabel('x')
+plt.ylabel('y')
+
+X = np.c_[np.ones((X.shape[0],1)), X]
+
+
+# training set
+X_train = X[:80]
+y_train = y[:80]
+# test set
+X_test = X[80:]
+y_test = y[80:]
+
+
+b = 0
+w = 0
+lr = 0.01
+iteration = 10000
+
+# 画出每一次迭代和损失函数变化
+theta , Cost_J = gradientDescent(X_train, y_train, theta=[b, w], alpha= lr, num_iters= iteration)
+
+print('最终b, w结果: ',theta)
+testCost = costFunction(X_test, y_test, theta)
+print('测试集误差: ',testCost)
+
+h = X.dot(theta)
+plt.plot(X_row, h, "b--")
+plt.subplot(1, 2, 2)
+plt.plot(Cost_J)
+plt.ylabel('Cost J')
+plt.xlabel('Iterations')
+plt.show()
+```
+
+结果如下：
+
+```
+最终b, w结果:  [1.99788294 0.50547522]
+测试集误差:  5.113037555609278e-05
+```
+
+![img](../../notes/lihongyi/images/2.png)
+
+### 学习L2-Norm，L1-Norm，L0-Norm
+
+>范数是一种强化了的距离概念，它在定义上比距离多了一条数乘的运算法则。有时候为了便于理解，我们可以把范数当作距离来理解。
+>
+>L0范数是指向量中非0的元素的个数。
+>
+>L1范数是指向量中非零元素绝对值之和。
+>
+>L2范数是指向量各元素的平方和然后求平方根，L2范数通常会被用来做优化目标函数的正则化项，防止模型为了迎合训练集而过于复杂造成过拟合的情况，从而提高模型的泛化能力。
 
 ### 推导正则化公式
 
+参考[L2正则化推导](<https://blog.csdn.net/winone361/article/details/82555283>)
+
 ### 为什么用L1-Norm代替L0-Norm
 
-$L0$是指向量中非0的元素的个数。如果我们用$L0​$范数来规则化一个参数矩阵W的话，就是希望W的大部分元素都是0。换句话说，让参数W是稀疏的。
+L0-Norm 优化的目标是使大多数参数为0，即W是稀疏的。但L0范数的优化问题是NP hard，且可证L1范数是L0范数的最优凸近似，因此通常使用L1范数来代替。
 
-不幸的是，L0范数的最优化问题是一个NP hard问题，而且理论上有证明，L1范数是L0范数的最优凸近似，因此通常使用L1范数来代替。
+### 为什么正则化时只对w/Θ做限制，不对b做限制
 
-### 为什么只对w/Θ做限制，不对b做限制
-
-b的变化只对函数的位置有影响，并不改变函数的平滑性；相反，对w的限制可以实现对特征的惩罚，留取更重要的特征，惩罚不重要的特征权重，从而使loss func更平滑，提高泛化能力，防止过拟合。
+模型的复杂程度是由w/θ决定的，b只是起到平移模型的作用。缩小b不能使模型简化，只能使模型分界面趋于靠近原点。相反，对w的限制可以实现对特征的惩罚，留取更重要的特征，惩罚不重要的特征权重，从而使Loss Function更平滑，提高泛化能力，防止过拟合。
 
 ------
 
 参考：
 
 [从最大似然估计开始，你需要打下的机器学习基石](<https://blog.csdn.net/tkkzc3E6s4Ou4/article/details/79016194>)
+
+[L2正则化推导](<https://blog.csdn.net/winone361/article/details/82555283>)
