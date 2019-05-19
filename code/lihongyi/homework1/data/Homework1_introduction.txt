@@ -1,0 +1,26 @@
+作业1：预测PM2.5的值
+在这个作业中，我们将用梯度下降方法预测PM2.5的值
+hw1要求：
+     1、要求python3.5+
+     2、只能用（1）numpy（2）scipy（3）pandas
+     3、请用梯度下降手写线性回归
+     4、最好的公共简单基线
+     5、对于想加载模型而并不想运行整个训练过程的人：
+	请上传训练代码并命名成 train.py
+	只要用梯度下降的代码就行了
+hw_best要求：
+     1、要求python3.5+ 
+     2、任何库都可以用
+     3、在kaggle上获得你选择的更高的分
+
+数据介绍：
+本次作業使用豐原站的觀測記錄，分成train set跟test set，train set是豐原站每個月的前20天所有資料test set則是從豐原站剩下的資料中取樣出來。
+train.csv:每個月前20天每個小時的氣象資料(每小時有18種測資)。共12個月。
+test.csv:從剩下的資料當中取樣出連續的10小時為一筆，前九小時的所有觀測數據當作feature，第十小時的PM2.5當作answer。一共取出240筆不重複的test data，請根據feauure預測這240筆的PM2.5。
+
+请完成之后参考以下资料：
+Sample_code:https://ntumlta.github.io/2017fall-ml-hw1/code.html
+Supplementary_Slide:https://docs.google.com/presentation/d/1WwIQAVI0RRA6tpcieynPVoYDuMmuVKGvVNF_DSKIiDI/edit#slide=id.g1ef6d808f1_2_0
+答案参考answer.csv
+
+	 

@@ -59,6 +59,7 @@ class LinearRegressionGD():
 X = np.linspace(0, 10, 100).reshape(100,1)
 y = 1+2*X + np.random.normal(0,0.5,(100,1))
 
+
 gd = LinearRegressionGD(epochs=1000)
 # w, b, cost = gd.miniBatch(X, y, batch_size=30)
 w, b, cost= gd.SGD(X, y)
