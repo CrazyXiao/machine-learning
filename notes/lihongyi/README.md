@@ -90,5 +90,15 @@
 
 **我的打卡**
 
-[线性回归任务一](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/lihongyi/day4-7.md>)
+[线性回归任务二](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/lihongyi/day4-7.md>)
+
+### 第8-10天：线性回归任务三
+
+**学习打卡内容：**
+
+**大作业：**
+
+- 按照Homework1_introduction.txt的要求完成这次作业
+
+- 访问我的百度云可以下载数据
 
