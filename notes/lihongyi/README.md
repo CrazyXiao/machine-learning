@@ -4,7 +4,7 @@
 
 #### **参考内容**
 
-- **[李宏毅机器学习课程](https://www.bilibili.com/video/av35932863?from=search&seid=2134843831238226258) **
+- [**李宏毅机器学习课程**](https://www.bilibili.com/video/av35932863?from=search&seid=2134843831238226258) 
 - [Datawhale整理开源笔记《李宏毅机器学习》](<https://github.com/datawhalechina/Leeml-Book>)
 - **《白话大数据与机器学习》** 
 - **周志华《机器学习》** 
