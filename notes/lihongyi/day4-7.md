@@ -265,8 +265,17 @@ MAE = $\frac{1}{m}\sum_{i=1}^{m}|y^{(i)}-\hat{y}^{(i)}|$
 
 ### $R^2$
 
-$R ^ {2}​$为决定系数，用来表示模型拟合性的分值，值越高表示模型拟合性越好，最高为1，可能为负值。
-$R ^ {2}​$的计算公式为1减去RSS与TSS的商。其中，TSS（Total Sum of Squares）为所有样本与均值的差异，是方差的m倍。而RSS（Residual sum of squares）为所有样本误差的平方和，是MSE的m倍。
+$R ^ {2}$为决定系数，用来表示模型拟合性的分值，值越高表示模型拟合性越好，最高为1，可能为负值。
+$R ^ {2}$的计算公式为1减去RSS与TSS的商。其中，TSS（Total Sum of Squares）为所有样本与均值的差异，是方差的m倍。而RSS（Residual sum of squares）为所有样本误差的平方和，是MSE的m倍。
+
+```
+# real为样本 y_hat为模型拟合函数
+rss = ((y_hat - real.value)**2).sum()
+tss = ((real.value- real.value.mean())**2).sum()
+r2 = 1 - rss / tss
+```
+
+
 
 ------
 
