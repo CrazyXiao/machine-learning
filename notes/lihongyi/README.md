@@ -96,9 +96,38 @@
 
 **学习打卡内容：**
 
-**大作业：**
+**大作业：** **预测PM2.5的值**
 
-- 按照Homework1_introduction.txt的要求完成这次作业
+##### 要求
 
-- 访问我的百度云可以下载数据
+ 1、要求python3.5+
+ 2、只能用（1）numpy（2）scipy（3）pandas
+ 3、请用梯度下降手写线性回归
+ 4、最好的公共简单基线
+
+**我的打卡**
+
+[代码](<https://github.com/CrazyXiao/machine-learning/tree/master/code/lihongyi/homework1>)
+
+### 第11-13天：机器学习任务四
+
+**学习视频内容：**
+
+- 观看李宏毅课程内容：p8
+
+- 视频连接：[**点我**](<https://www.bilibili.com/video/av35932863/?p=8>)
+
+- 学习[Datawhale整理笔记](https://datawhalechina.github.io/Leeml-Book/#/chapter8/chapter8)
+
+**学习打卡内容：**
+
+- 从基础概率推导贝叶斯公式，朴素贝叶斯公式(1)
+
+- 学习先验概率(2)
+
+- 学习后验概率(3)
+
+- 学习LR和linear regreeesion之间的区别(4)
+
+- 推导sigmoid function公式(5)
 
