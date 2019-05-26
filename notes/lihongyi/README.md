@@ -122,12 +122,34 @@
 **学习打卡内容：**
 
 - 从基础概率推导贝叶斯公式，朴素贝叶斯公式(1)
-
 - 学习先验概率(2)
-
 - 学习后验概率(3)
-
 - 学习LR和linear regreeesion之间的区别(4)
-
 - 推导sigmoid function公式(5)
+
+##### 我的打卡
+
+[机器学习任务四](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/lihongyi/day11-13.md>)
+
+### 第14-16天：机器学习任务五
+
+**学习视频内容：**
+
+- 观看李宏毅课程内容：p8
+- 视频连接：[**点我**](<https://www.bilibili.com/video/av35932863/?p=9>)
+- 学习[Datawhale整理笔记](https://datawhalechina.github.io/Leeml-Book/#/chapter9/chapter9)
+
+**学习打卡内容：**
+
+- 推导LR损失函数(1)
+
+- 学习LR梯度下降(2)
+
+- 利用代码描述梯度下降(选做)(3)
+
+- Softmax原理(4)
+
+- softmax损失函数(5)
+
+- softmax梯度下降(6)
 
