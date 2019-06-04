@@ -142,14 +142,40 @@
 **学习打卡内容：**
 
 - 推导LR损失函数(1)
-
 - 学习LR梯度下降(2)
-
 - 利用代码描述梯度下降(选做)(3)
-
 - Softmax原理(4)
-
 - softmax损失函数(5)
-
 - softmax梯度下降(6)
+
+##### 我的打卡
+
+[机器学习任务五](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/lihongyi/day14-16.md>)
+
+### 第17-19天：逻辑回归代码实现
+
+##### 要求
+
+- 学习LR学习算法的核心代码
+- 写出详细的注释说明
+
+##### 我的打卡
+
+[机器学习任务六](<https://github.com/CrazyXiao/machine-learning/blob/master/code/lihongyi/task6.py>)
+
+### 第20-22天：决策树
+
+##### 学习目标
+
+- 信息量计算，原理
+- 信息熵
+- 证明0\leqslant H(p)\leqslant logn0⩽*H*(*p*)⩽*l**o**g**n*
+- 联合概率，边缘概率
+- 联合熵，条件熵，条件熵公式推导
+- 互信息，互信息公式推导
+- 相对熵，交叉熵
+- 回顾LR中的交叉熵
+- 计算给定数据集中的香农熵
+
+[机器学习任务七](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/lihongyi/day20-22.md>)
 
