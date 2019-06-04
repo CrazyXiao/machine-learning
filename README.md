@@ -21,7 +21,7 @@ Python拥有大量的数据分析、统计和机器学习库，使其成为许�
 
 [吴恩达老师的机器学习课程个人笔记及python实现](https://github.com/CrazyXiao/machine-learning/tree/master/notes/AndrewNg)
 
-**[李宏毅机器学习任务30天](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/lihongyi/README.md>)**
+**[李宏毅机器学习任务30天](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/lihongyi>)**
 
 机器学习实战
 
