@@ -206,3 +206,6 @@
 - 选择最好的数据集划分方式代码
 
 - 创建树的函数代码
+
+[机器学习任务八](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/lihongyi/day23-26.md>)
+
