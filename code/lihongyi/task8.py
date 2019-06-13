@@ -75,9 +75,11 @@ def createTree(dataSet, feature_labels):
         myTree[bestFeatLabel][v] = createTree(subDataSet,subLabels)
     return myTree
 
-# 读取数据集，这里忽略 ids 及 连续属性列
-dataset = pd.read_csv("watermelon_3a.csv", usecols=['color', 'root', 'knocks', 'texture', 'navel', 'touch', 'label'])
-feature_labels = list(dataset.columns)
-dataset = dataset.values
-res = createTree(dataset, feature_labels)
-print(res)
+
+if __name__ == '__main__':
+    # 读取数据集，这里忽略 ids 及 连续属性列
+    dataset = pd.read_csv("watermelon_3a.csv", usecols=['color', 'root', 'knocks', 'texture', 'navel', 'touch', 'label'])
+    feature_labels = list(dataset.columns)
+    dataset = dataset.values
+    res = createTree(dataset, feature_labels)
+    print(res)
