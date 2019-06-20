@@ -23,7 +23,7 @@ Python拥有大量的数据分析、统计和机器学习库，使其成为许�
 
 **[李宏毅机器学习任务30天](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/lihongyi>)**
 
-[NLP理论实践18天]()
+[NLP理论实践18天](<https://github.com/CrazyXiao/machine-learning/tree/master/notes/nlp>)
 
 机器学习实战
 
