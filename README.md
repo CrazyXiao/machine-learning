@@ -23,6 +23,8 @@ Python拥有大量的数据分析、统计和机器学习库，使其成为许�
 
 **[李宏毅机器学习任务30天](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/lihongyi>)**
 
+[NLP理论实践18天]()
+
 机器学习实战
 
 《统计学习方法》算法实现
