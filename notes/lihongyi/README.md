@@ -177,6 +177,8 @@
 - 回顾LR中的交叉熵
 - 计算给定数据集中的香农熵
 
+##### 我的打卡
+
 [机器学习任务七](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/lihongyi/day20-22.md>)
 
 ### 第23-26天：决策树任务二
@@ -184,28 +186,51 @@
 **学习打卡内容：**
 
 - 总结决策树模型结构
-
 - 理解决策树递归思想
-
 - 学习信息增益
-
 - 学习信息增益率
-
 - 学习ID3算法优缺点
-
 - 学习C4.5算法优缺点
-
 - 理解C4.5算法在ID3算法上有什么提升
-
 - 学习C4.5算法在连续值上的处理
-
 - 学习决策树如何生成
-
 - 划分数据集代码
-
 - 选择最好的数据集划分方式代码
-
 - 创建树的函数代码
 
+##### 我的打卡
+
 [机器学习任务八](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/lihongyi/day23-26.md>)
+
+### 第27-29天：决策树任务三
+
+**学习打卡内容：**
+
+- 阅读《机器学习实战》中42页-48页
+
+- 在python中使用Matlib注释绘制树图形
+
+- Matplotlib注释
+
+- 构造注释树
+
+##### 我的打卡
+
+[机器学习任务九](<https://github.com/CrazyXiao/machine-learning/blob/master/code/lihongyi/task9.py>)
+
+### 第30-33天：决策树任务四
+
+**学习打卡内容：**
+
+- 阅读《李航统计学习方法》的65-74页
+
+- 学习Gini指数
+
+- 学习回归树
+
+- 剪枝
+
+##### 我的打卡
+
+[机器学习任务十](<https://github.com/CrazyXiao/machine-learning/blob/master/notes/lihongyi/day30-33.md>)
 
