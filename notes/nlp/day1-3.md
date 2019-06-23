@@ -165,3 +165,226 @@ with tf.Session() as sess:
 # [array([ 14.], dtype=float32)]
 ```
 
+### IMDB影评文本分类
+
+#### IMDB数据集
+
+该数据集包含来自互联网电影数据库的 50000 条影评文本。我们将这些影评拆分为训练集（25000 条影评）和测试集（25000 条影评）。我们将使用keras来对影评进行文本分类。这里我用的tensorflow版本(1.13.1)已经内置了keras库。
+
+下载IMDB数据集：
+
+```python
+from tensorflow import keras
+imdb = keras.datasets.imdb
+(train_data, train_labels), (test_data, test_labels) = imdb.load_data(num_words=10000)
+```
+
+如果出现下载失败的情况，需要离线下载imdb，这时代码修改如下：
+
+```python
+(train_data, train_labels), (test_data, test_labels) = imdb.load_data(path="./dataset/imdb.npz", num_words=10000)
+```
+
+注释掉imdb.py中如下几行 ：
+
+```
+  # path = get_file(
+  #     path,
+  #     origin=origin_folder + 'imdb.npz',
+  #     file_hash='599dadb1135973df5b59232a0e9a887c')
+```
+
+#### 准备数据
+
+影评（整数数组）必须转换为张量，然后才能馈送到神经网络中。
+
+由于影评的长度必须相同，我们将使用 pad_sequences函数将长度标准化。
+
+```python
+train_data = keras.preprocessing.sequence.pad_sequences(train_data,
+                                                        value=word_index["<PAD>"],
+                                                        padding='post',
+                                                        maxlen=256)
+
+test_data = keras.preprocessing.sequence.pad_sequences(test_data,
+                                                       value=word_index["<PAD>"],
+                                                       padding='post',
+                                                       maxlen=256)
+```
+
+#### 构建模型
+
+在本示例中，输入数据由字词-索引数组构成。要预测的标签是 0 或 1。
+
+```python
+vocab_size = 10000
+model = keras.Sequential()
+model.add(keras.layers.Embedding(vocab_size, 16))
+model.add(keras.layers.GlobalAveragePooling1D())
+model.add(keras.layers.Dense(16, activation=tf.nn.relu))
+model.add(keras.layers.Dense(1, activation=tf.nn.sigmoid))
+```
+
+按顺序堆叠各个层以构建分类器：
+
+1. 第一层是 `Embedding` 层。该层会在整数编码的词汇表中查找每个字词-索引的嵌入向量。模型在接受训练时会学习这些向量。这些向量会向输出数组添加一个维度。生成的维度为：`(batch, sequence, embedding)`。
+2. 接下来，一个 `GlobalAveragePooling1D` 层通过对序列维度求平均值，针对每个样本返回一个长度固定的输出向量。这样，模型便能够以尽可能简单的方式处理各种长度的输入。
+3. 该长度固定的输出向量会传入一个全连接 (`Dense`) 层（包含 16 个隐藏单元）。
+4. 最后一层与单个输出节点密集连接。应用 `sigmoid` 激活函数后，结果是介于 0 到 1 之间的浮点值，表示概率或置信水平。
+
+#### 损失函数
+
+我们将使用 `binary_crossentropy` 损失函数。
+
+该函数并不是唯一的损失函数，例如，您可以选择 `mean_squared_error`。但一般来说，`binary_crossentropy` 更适合处理概率问题，它可测量概率分布之间的“差距”，在本例中则为实际分布和预测之间的“差距”。
+
+```python
+model.compile(optimizer=tf.train.AdamOptimizer(),
+              loss='binary_crossentropy',
+              metrics=['accuracy'])
+```
+
+#### 创建验证集
+
+在训练时，我们需要检查模型处理从未见过的数据的准确率。我们从原始训练数据中分离出 10000 个样本，创建一个验证集。
+
+```python
+x_val = train_data[:10000]
+partial_x_train = train_data[10000:]
+
+y_val = train_labels[:10000]
+partial_y_train = train_labels[10000:]
+```
+
+#### 训练模型
+
+用有 512 个样本的小批次训练模型 40 个周期。这将对 x_train 和 y_train 张量中的所有样本进行 40 次迭代。在训练期间，监控模型在验证集的 10000 个样本上的损失和准确率：
+
+```python
+history = model.fit(partial_x_train,
+                    partial_y_train,
+                    epochs=40,
+                    batch_size=512,
+                    validation_data=(x_val, y_val),
+                    verbose=1)
+```
+
+#### 评估模型
+
+我们来看看模型的表现如何。模型会返回两个值：损失（表示误差的数字，越低越好）和准确率。
+
+```python
+results = model.evaluate(test_data, test_labels)
+print(results) # [0.3244608826637268, 0.87292]
+```
+
+#### 可视化结果
+
+##### 损失比较
+
+```python
+import matplotlib.pyplot as plt
+
+acc = history.history['acc']
+val_acc = history.history['val_acc']
+loss = history.history['loss']
+val_loss = history.history['val_loss']
+
+epochs = range(1, len(acc) + 1)
+
+# "bo" is for "blue dot"
+plt.plot(epochs, loss, 'bo', label='Training loss')
+# b is for "solid blue line"
+plt.plot(epochs, val_loss, 'b', label='Validation loss')
+plt.title('Training and validation loss')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.legend()
+plt.show()
+```
+
+![img](../../notes/nlp/images/1.png)
+
+##### 准确率比较
+
+```python
+acc_values = history.history['acc']
+val_acc_values = history.history['val_acc']
+plt.plot(epochs, acc, 'bo', label='Training acc')
+plt.plot(epochs, val_acc, 'b', label='Validation acc')
+plt.title('Training and validation accuracy')
+plt.xlabel('Epochs')
+plt.ylabel('Accuracy')
+plt.legend()
+plt.show()
+```
+
+![img](../../notes/nlp/images/2.png)
+
+### CNN中文文本分类
+
+参考链接：
+
+<https://blog.csdn.net/u011439796/article/details/77692621>
+
+### 分类模型评估
+
+我们将算法预测的结果分成四种情况：
+
+1. **正确肯定**（**True Positive,TP**）：预测为真，实际为真， 真阳性。
+2. **正确否定**（**True Negative,TN**）：预测为假，实际为假，真阴性。
+3. **错误肯定**（**False Positive,FP**）：预测为真，实际为假，假阳性。
+4. **错误否定**（**False Negative,FN**）：预测为假，实际为真，假阴性。
+
+#### 准确率(Accuracy)
+
+测试样本中正确分类的样本数占总测试的样本数的比例。
+
+**ACC=(TP+TN)/(TP+TN+FN+FP)**
+
+#### 精确率(查准率，Precision)
+
+**P=TP/(TP+FP)**
+
+例，在所有我们预测有恶性肿瘤的病人中，实际上有恶性肿瘤的病人的百分比，越高越好。
+
+#### 召回率(查全率，Recall)
+
+**R=TP/(TP+FN)**
+
+例，在所有实际上有恶性肿瘤的病人中，成功预测有恶性肿瘤的病人的百分比，越高越好。
+
+#### 特异性
+
+**S=FP/(FP+TN)**
+
+#### F1值
+
+我们用F1值来综合评估精确率和召回率，它是精确率和召回率的调和均值。
+
+$F_1Score=2\frac{PR}{P+R}$
+
+#### ROC曲线
+
+以召回率为y轴，以特异性为x轴，我们就直接得到了RoC曲线。从召回率和特异性的定义可以理解，召回率越高，特异性越小，我们的模型和算法就越高效。也就是画出来的RoC曲线越靠近左上越好。
+
+#### AUC值
+
+从几何的角度讲，RoC曲线下方的面积越大越大，则模型越优。所以有时候我们用RoC曲线下的面积，即AUC（Area Under Curve）值来作为算法和模型好坏的标准。
+
+#### PR曲线
+
+以精确率为y轴，以召回率为x轴，我们就得到了PR曲线。仍然从精确率和召回率的定义可以理解，精确率越高，召回率越高，我们的模型和算法就越高效。也就是画出来的PR曲线越靠近右上越好。
+
+![img](../../notes/nlp/images/3.png)
+
+#### 混淆矩阵
+
+混淆矩阵，也称为误差矩阵，是一种特定的表格布局，允许可视化算法的性能， 矩阵的每一行代表预测类中的实例，而每列代表实际类中的实例，“混淆”一词源于这样一个事实：它可以很容易地看出系统是否混淆了两个类。
+
+如果分类系统已经过训练以区分猫，狗和兔子，则混淆矩阵将总结测试算法的结果以供进一步检查。假设有27只动物的样本：8只猫，6只狗和13只兔子，产生的混淆矩阵如下表所示：
+
+![img](../../notes/nlp/images/4.png)
+
+在这个混淆矩阵中，在8只实际的猫中，系统预测三只是狗，而在六只狗中，它预测一只是一只兔子，两只是猫。 我们可以从矩阵中看出，所讨论的系统难以区分猫和狗，但可以很好地区分兔子和其他类型的动物。 所有正确的预测都位于表格的对角线上（以粗体突出显示），因此很容易在视觉上检查表格中的预测错误，因为它们将由对角线外的值表示。
+
