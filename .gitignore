@@ -105,4 +105,3 @@ venv.bak/
 .idea/
 tests/
 other/
-tf/dataset/
