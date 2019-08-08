@@ -17,11 +17,7 @@ Python拥有大量的数据分析、统计和机器学习库，使其成为许�
 
 [自然语言处理](https://github.com/CrazyXiao/machine-learning/blob/master/notes/自然语言处理.md)
 
-## 实战
-
-[一个入门的机器学习项目](<https://github.com/CrazyXiao/machine-learning/blob/master/code/first_ml_project/house_prices_predict.ipynb>)
-
-简单的聊天机器人实现
+## 笔记
 
 [吴恩达老师的机器学习课程个人笔记及python实现](https://github.com/CrazyXiao/machine-learning/tree/master/notes/AndrewNg)
 
@@ -32,6 +28,16 @@ Python拥有大量的数据分析、统计和机器学习库，使其成为许�
 机器学习实战
 
 《统计学习方法》算法实现
+
+## 实战
+
+[完整的入门级机器学习项目](<https://github.com/CrazyXiao/machine-learning/blob/master/code/first_ml_project/house_prices_predict.ipynb>)
+
+[练习项目之银行精准营销](<https://github.com/CrazyXiao/machine-learning/blob/master/code/kesci_bank_precision/bank_predict.ipynb>)
+
+[特征工程及数据挖掘实战之信用卡逾期预测](<https://github.com/CrazyXiao/machine-learning/tree/master/code/credit>)
+
+简单的聊天机器人实现
 
 ## 基础
 
